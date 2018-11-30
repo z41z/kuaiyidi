@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#01b592",
+    "navigationBarTitleText": "快易递",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#01b592",
+    "backgroundColor":"#ffffff",
+    "borderStyle":"black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "寄快递",
+        "iconPath": "static/navbar-home.png",
+        "selectedIconPath": "static/navbar-home-active.png"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "text": "查快递",
+        "iconPath": "static/search.png",
+        "selectedIconPath": "static/search-active.png"
+      }
+    ]
+  }
+}

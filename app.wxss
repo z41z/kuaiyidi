@@ -1,0 +1,6 @@
+/**app.wxss**/
+.container {
+  font-size: 28rpx;
+  min-height: 100vh;
+  background: #f1f1f1;
+} 

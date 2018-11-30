@@ -1,0 +1,85 @@
+<view class="container" wx:if="{{!addSuccess}}">
+  <view class="send" wx:if="{{currentStep===1}}">
+    <view class="title title-default">
+      <text>第{{currentStep}}步：填写寄件人信息</text>
+    </view>
+    <view class="item">
+      <text>寄件人姓名</text>
+      <input type="text" placeholder="我叫快易递，你呢？" data-name="sName" class="validate" value="{{sName}}" bindinput="setValue" />
+    </view>
+    <view class="item">
+      <text>寄件人电话</text>
+      <input type="number" placeholder="怎么联系你？" maxlength="11" bindinput="setValue" data-name="sPhone" class="J_Phone validate" value="{{sPhone}}" />
+    </view>
+    <view class="item">
+      <picker mode="region" bindchange="bindSendRegionChange" value="{{sendRegion}}">
+        <view class="picker">
+          选择寄件人地区
+          <view>{{sendRegion[0]+'-'+sendRegion[1]+'-'+sendRegion[2]}}</view>
+        </view>
+      </picker>
+    </view>
+    <view class="item">
+      <text>详细地址</text>
+      <input type="text" placeholder="如：时代1号广场1808" bindinput="setValue" data-name="sAddress" class="validate" value="{{sAddress}}" />
+    </view>
+  </view>
+  <view class="receive" wx:if="{{currentStep===2}}">
+    <view class="title title-purple">
+      <text>第{{currentStep}}步：填写收件人信息</text>
+    </view>
+    <view class="item">
+      <text>收件人姓名</text>
+      <input type="text" placeholder="他(她)怎么称呼？" bindinput="setValue" data-name="rName" class="validate" value="{{rName}}" />
+    </view>
+    <view class="item">
+      <text>收件人电话</text>
+      <input type="number" placeholder="他(她)的电话？" maxlength="11" bindinput="setValue" data-name="rPhone" class="J_Phone validate" value="{{rPhone}}" />
+    </view>
+    <view class="item">
+      <picker mode="region" bindchange="bindReceiveRegionChange" value="{{receiveRegion}}">
+        <view class="picker">
+          选择收件人地区
+          <view>{{receiveRegion[0]+'-'+receiveRegion[1]+'-'+receiveRegion[2]}}</view>
+        </view>
+      </picker>
+    </view>
+    <view class="item">
+      <text>详细地址</text>
+      <input type="text" placeholder="如：时代1号广场1808" bindinput="setValue" data-name="rAddress" class="validate" value="{{rAddress}}" />
+    </view>
+  </view>
+  <view class="info" wx:if="{{currentStep===3}}">
+    <view class="title title-yellow">
+      <text>第{{currentStep}}步：选择快递公司</text>
+    </view>
+    <view class="item">
+      <picker bindchange="bindExpressChange" value="{{currentExpress}}" range="{{expressName}}">
+        <view class="picker">
+          快递公司
+          <view>
+            {{currentExpress}}
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="item">
+      <text>寄出的时间</text>
+      <input input type="text" placeholder="大概什么时候？[可以不填]" bindinput="setValue" data-name="sendDate" value="{{sendDate}}" />
+    </view>
+    <view class="item">
+      <text>物品的重量</text>
+      <input input type="text" placeholder="给个大概重量 [可以不填]" bindinput="setValue" data-name="Remark" value="{{Remark}}" />
+    </view>
+  </view>
+  <view class="tips">{{tips}}</view>
+  <view class="btn-group">
+    <button type="default" bindtap="nextStep" data-step="-1" wx:if="{{currentStep > 1}}"> 上一步 </button>
+    <button type="primary" bindtap="nextStep" data-step="1" wx:if="{{currentStep < 3}}"> 下一步 </button>
+    <button type="primary" wx:if="{{currentStep === 3}}" bindtap='sendData'> 提交 </button>
+  </view>
+</view>
+<view class="success" wx:else>
+  订单提交成功!
+  <button type="primary" bindtap='returnHome'> 返回首页 </button>
+</view>

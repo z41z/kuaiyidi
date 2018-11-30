@@ -1,0 +1,95 @@
+.container {
+  color: #4d4d4d;
+  font-family: "Microsoft Yahei";
+  font-size: 28rpx;
+  padding: 3% 0;
+}
+
+input {
+  border: 1px solid #fafafa;
+  border-radius: 3px;
+  padding: 0 5%;
+  margin-top: 30rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background: #fff;
+  color: #888;
+}
+
+.btn-group {
+  font-size: 36rpx;
+  margin: 20rpx auto;
+  display: flex;
+  width: 94%;
+}
+
+button {
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 32rpx;
+  margin: 0 20rpx;
+  flex: 1;
+}
+
+button[type="primary"] {
+  background-color: #01b592;
+}
+.btn-group button[type="default"] {
+  color: #4d4d4d;
+}
+
+.title {
+  font-size: 36rpx;
+  margin: 40rpx auto;
+  font-weight: bold;
+  padding: 0 5%;
+  position: relative;
+  line-height: 72rpx;
+  /* background: #07cbf7; *//* text-align: center; */
+  color: #01b592;
+  /* width: 35%; */
+  border-radius: 4px;
+}
+
+.item {
+  margin: 0 auto 30rpx;
+}
+
+.item text {
+  font-size: 30rpx;
+  padding: 0 5%;
+}
+
+picker view {
+  text-indent: 5%;
+}
+
+picker view view {
+  border: 1px solid #fafafa;
+  border-radius: 3px;
+  margin-top: 20rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding: 0 5%;
+  background: #fff;
+  text-indent: 0;
+  color: #888;
+}
+
+.tips {
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 5%;
+  color: #01b592;
+}
+
+.success{
+  color: #01b592;
+  background: #fafafa;
+  height: 100vh;
+  text-align: center;
+  padding: 10% 5%;
+}
+.success button{
+  margin: 60rpx;
+}

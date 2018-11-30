@@ -1,0 +1,99 @@
+/* pages/search/index.wxss */
+
+.container {
+  background: #f1f1f1;
+  color: #4d4d4d;
+  padding: 3% 0;
+}
+
+.container .info {
+  display: flex;
+  margin: 5%;
+}
+
+.container .info input {
+  padding-left: 16rpx;
+  border: 1px solid #01b592;
+  flex: 1;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-right: 0;
+  background: #fff;
+  color: #4d4d4d;
+}
+
+button {
+  height: 76rpx;
+  font-size: 28rpx;
+  line-height: 76rpx;
+  border-radius: 0 8rpx 8rpx 0;
+  background-color: #01b592 !important;
+}
+
+picker {
+  border: 1px solid #01b592;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 8rpx 0 0 8rpx;
+  padding: 0 16rpx;
+  margin-right: -1px;
+  background: #fff;
+}
+
+.info picker {
+  color: #01b592;
+}
+
+/* 物流轨迹 */
+
+.result .item {
+  border-bottom: 1px dashed #efefef;
+  padding: 3%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.result .item .item-time {
+  color: #ccc;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  padding: 0 5%;
+}
+
+/* .result .item .item-time::before {
+  position: absolute;
+  content: "";
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  background: #eee;
+  left: -16rpx;
+  top: 12rpx;
+  display: block;
+} */
+
+.result .item .item-info {
+  color: #999;
+  padding: 0 5%;
+}
+
+.result text {
+  font-size: 32rpx;
+  color: #777;
+}
+
+.result .title {
+  display: block;
+  padding: 0 5% 5%;
+}
+
+.empty {
+  text-align: center;
+  margin: 100rpx auto;
+}
+
+.empty text {
+  color: #aaa;
+  font-size: 30rpx;
+}

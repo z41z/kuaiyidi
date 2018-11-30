@@ -1,0 +1,35 @@
+<!--pages/search/index.wxml-->
+<view class="container">
+  <view class="info">
+    <picker bindchange="bindExpressChange" value="{{currentExpress}}" range="{{expressName}}">
+      {{currentExpress}}
+    </picker>
+    <input type="text" placeholder="请输入快递单号" value="{{keywords}}" bindinput="setValue" />
+    <button type="primary" bindtap="search">
+      <icon type="search" color="#fff" size="12" />
+    </button>
+  </view>
+  <view class="result">
+    <view wx:if="{{data.length}}">
+      <view>
+        <text class="title">物流轨迹如下：</text>
+      </view>
+      <view wx:for="{{data}}" wx:for-item="item" wx:for-index="index" class="item">
+        <view class="item-time">
+          {{item.AcceptTime}}
+        </view>
+        <view class="item-info">
+          {{item.AcceptStation}}
+        </view>
+      </view>
+    </view>
+    <view class="empty" wx:else>
+      <view>
+        <image style="width: 200px; height: 200px;" mode="widthFix" src="{{imgUrl}}"></image>
+      </view>
+      <view style="margin:40rpx;">
+        <text>{{tips}}</text>
+      </view>
+    </view>
+  </view>
+</view>
