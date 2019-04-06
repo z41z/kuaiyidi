@@ -4,7 +4,7 @@
     <picker bindchange="bindExpressChange" value="{{currentExpress}}" range="{{expressName}}">
       {{currentExpress}}
     </picker>
-    <input type="text" placeholder="请输入快递单号" value="{{keywords}}" bindinput="setValue" />
+    <input type="number" placeholder="请输入快递单号" value="{{keywords}}" bindinput="setValue" />
     <button type="primary" bindtap="search">
       <icon type="search" color="#fff" size="12" />
     </button>

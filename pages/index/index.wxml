@@ -74,8 +74,8 @@
   </view>
   <view class="tips">{{tips}}</view>
   <view class="btn-group">
-    <button type="default" bindtap="nextStep" data-step="-1" wx:if="{{currentStep > 1}}"> 上一步 </button>
-    <button type="primary" bindtap="nextStep" data-step="1" wx:if="{{currentStep < 3}}"> 下一步 </button>
+    <button type="default" bindtap="nextStep" data-step="-1" wx:if="{{currentStep > 1}}" > 上一步 </button>
+    <button type="primary" bindtap="nextStep" data-step="1" wx:if="{{currentStep < 3}}" > 下一步 </button>
     <button type="primary" wx:if="{{currentStep === 3}}" bindtap='sendData'> 提交 </button>
   </view>
 </view>
