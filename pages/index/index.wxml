@@ -82,4 +82,6 @@
 <view class="success" wx:else>
   订单提交成功!
   <button type="primary" bindtap='returnHome'> 返回首页 </button>
+  <ad unit-id="adunit-4248ef295f5b963f"></ad>
 </view>
+<ad unit-id="adunit-4248ef295f5b963f"></ad>

@@ -1,5 +1,6 @@
 <!--pages/search/index.wxml-->
 <view class="container">
+<ad unit-id="adunit-4248ef295f5b963f"></ad>
   <view class="info">
     <picker bindchange="bindExpressChange" value="{{currentExpress}}" range="{{expressName}}">
       {{currentExpress}}

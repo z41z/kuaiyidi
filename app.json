@@ -13,8 +13,8 @@
   "tabBar": {
     "color": "#aaa",
     "selectedColor": "#01b592",
-    "backgroundColor":"#ffffff",
-    "borderStyle":"black",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -29,5 +29,6 @@
         "selectedIconPath": "static/search-active.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
